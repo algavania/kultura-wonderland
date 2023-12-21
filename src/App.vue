@@ -42,8 +42,18 @@ export default {
   line-height: 130%;
 }
 
+.text-lg {
+  font-size: 2.7rem !important;
+  line-height: 120%;
+}
+
 .text-md {
   font-size: 1.7rem !important;
+}
+
+.text-sm {
+  font-size: 1.04rem !important;
+  line-height: 200%;
 }
 
 .text-color-primary {
@@ -75,7 +85,6 @@ export default {
 }
 
 .button-filled {
-  font-family: 'Sora', sans-serif !important;
   color: #FFFFFF !important;
   border-radius: 1000px !important;
   padding: 1.3rem 1.4rem !important;
@@ -84,5 +93,19 @@ export default {
   text-transform: capitalize !important;
   letter-spacing: 0 !important;
   font-size: 0.9rem !important;
+  font-weight: 700 !important;
+}
+
+.button-outlined {
+  color: #60A001 !important;
+  background-color: #FAFFF2 !important;
+  border: 2px solid #78C601;
+  border-radius: 1000px !important;
+  padding: 1.3rem 1.4rem !important;
+  text-transform: capitalize !important;
+  letter-spacing: 0 !important;
+  font-size: 0.9rem !important;
+  font-weight: 700 !important;
+  box-shadow: none !important;
 }
 </style>
