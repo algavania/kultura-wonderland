@@ -1,13 +1,10 @@
 <template>
   <v-app style="background-color: #FAFFF2 !important;">
-    <div class="page-container">
-      <!-- <NavBar /> -->
+    <!-- <NavBar /> -->
 
-      <v-main>
-        <router-view />
-      </v-main>
-
-    </div>
+    <v-main>
+      <router-view />
+    </v-main>
   </v-app>
 </template>
 
