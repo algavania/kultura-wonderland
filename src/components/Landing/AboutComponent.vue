@@ -1,6 +1,6 @@
 <template>
     <div class="d-flex align-center mt-16 pt-16" style="gap: 14rem">
-        <div style="flex: 1;">
+        <div class="flex-1">
             <h2 class="text-lg">
                 Ragam <span class="text-accent">Budaya Kuno</span> Asal <span class="text-accent">Indonesia</span>
             </h2>
@@ -12,7 +12,9 @@
                 Jelajahi Sekarang
             </v-btn>
         </div>
-        <div style="flex: 1; height: 20rem; width: 100%; background-color: green;"></div>
+        <div class="flex-1">
+            <img :src="require('@/assets/img_about.svg')" style="width: 100%;" />
+        </div>
     </div>
 </template>
 

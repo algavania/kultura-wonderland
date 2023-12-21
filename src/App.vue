@@ -37,20 +37,24 @@ export default {
   padding: 0 8rem;
 }
 
+/* 56px */
 .text-xl {
   font-size: 3rem !important;
   line-height: 130%;
 }
 
+/* 48px */
 .text-lg {
   font-size: 2.7rem !important;
   line-height: 120%;
 }
 
+/* 32px */
 .text-md {
   font-size: 1.7rem !important;
 }
 
+/* 16px */
 .text-sm {
   font-size: 1.04rem !important;
   line-height: 200%;
@@ -107,5 +111,9 @@ export default {
   font-size: 0.9rem !important;
   font-weight: 700 !important;
   box-shadow: none !important;
+}
+
+.flex-1 {
+  flex: 1 !important;
 }
 </style>
