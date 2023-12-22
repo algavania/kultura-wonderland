@@ -122,16 +122,6 @@ export default {
 </script>
 
 <style scoped>
-.bottom-bg {
-  background-image: url("../assets/footer/bg-bottom.svg") !important;
-  background-repeat: no-repeat !important;
-  background-position: bottom left;
-}
-.top-bg {
-  background-image: url("../assets/footer/bg-top.svg") !important;
-  background-repeat: no-repeat !important;
-  background-position: top right;
-}
 
 .footer-card {
   position: absolute;
