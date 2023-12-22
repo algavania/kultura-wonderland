@@ -50,7 +50,7 @@ export default {
           revealElements[i].classList.add("active");
         }
       }
-    }
+    },
   },
 };
 </script>

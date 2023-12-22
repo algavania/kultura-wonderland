@@ -1,5 +1,5 @@
 <template>
-  <section class="my-16 pt-6 pt-lg-16">
+  <section id="culture" class="my-16 pt-6 pt-lg-16">
     <div class="mt-8">
       <div class="align-center d-flex flex-gap flex-column flex-lg-row">
         <v-col class="image-col flex-1">

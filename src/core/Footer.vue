@@ -50,9 +50,11 @@
                       <div class="text-sm font-weight-bold text-color-white mb-4">
                         Tautan
                       </div>
-                      <div v-for="link in links" :key="link.to" class="mt-1">
-                        <router-link :to="link.to" class="text-color-white text-sm font-weight-light">
-                          {{ link.name }}</router-link>
+                      <div v-for="link in links" :key="link.id" class="mt-1">
+                        <p @click="navigateTo(link.id)"
+                          class="text-color-white text-sm font-weight-light text-decoration-underline"
+                          style="cursor: pointer;">
+                          {{ link.name }}</p>
                       </div>
                     </div>
                   </v-col>
@@ -92,10 +94,9 @@ export default {
   name: "FooterSection",
   data: () => ({
     links: [
-      { name: "Beranda", to: "/" },
-      { name: "Tentang", to: "/about" },
-      { name: "Budaya", to: "/culture" },
-      { name: "Acara", to: "/event" },
+      { name: "Beranda", id: "hero" },
+      { name: "Tentang", id: "about" },
+      { name: "Budaya", id: "culture" },
     ],
     socials: [
       { icon: "facebook.svg", to: "https://www.facebook.com/kultura.id" },
@@ -105,6 +106,14 @@ export default {
       { icon: "spotify.svg", to: "https://open.spotify.com/kultura" },
     ],
   }),
+  methods: {
+    navigateTo(id) {
+      document.getElementById(id).scrollIntoView({
+        behavior: "smooth",
+        block: id == 'about' ? "center" : "start",
+      });
+    },
+  }
 };
 </script>
 

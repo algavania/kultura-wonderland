@@ -1,5 +1,5 @@
 <template>
-    <div class="d-flex flex-column flex-lg-row align-center mt-16 pt-2 pt-lg-16 flex-gap">
+    <div id="about" class="d-flex flex-column flex-lg-row align-center mt-16 pt-2 pt-lg-16 flex-gap">
         <div class="flex-1 mt-10 reveal">
             <h2 class="text-lg">
                 Ragam <span class="text-accent">Budaya Kuno</span> Asal <span class="text-accent">Indonesia</span>

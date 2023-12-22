@@ -1,5 +1,5 @@
 <template>
-    <div class="text-center pt-4 pt-lg-16">
+    <div id="hero" class="text-center pt-4 pt-lg-16">
         <div class="reveal">
             <h1 class="text-xl heading">
                 <span class="text-color-primary">“</span>Budaya <span class="text-accent">Tak
