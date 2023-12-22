@@ -7,7 +7,7 @@
             <img src="../../assets/home/culture1.svg" width="100%" height="100%" />
           </div>
         </v-col>
-        <v-col>
+        <v-col class="reveal">
           <div class="flex-1">
             <div class="default-badge" style="width: fit-content">
               Budaya Kuno
@@ -39,7 +39,7 @@
 
     <div class="mt-16 pt-4 pt-lg-16">
       <div class="align-center d-flex flex-gap flex-column flex-lg-row">
-        <v-col class="flex-1 order-2 order-lg-1">
+        <v-col class="flex-1 order-2 order-lg-1 reveal">
           <div>
             <div class="default-badge" style="width: fit-content">
               Budaya Daerah
