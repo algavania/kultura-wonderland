@@ -345,7 +345,7 @@ export default {
 
 @media (max-width: 600px) {
   .book {
-    height: 22rem;
+    height: 26rem;
   }
 
   .image-top {
