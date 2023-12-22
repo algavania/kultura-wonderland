@@ -1,6 +1,6 @@
 <template>
   <nav class="pa-0" elevation="0" style="z-index: 100 !important">
-    <v-app-bar fixed elevation="0" height="100" color="background" class="pb-4 nav-shadow">
+    <v-app-bar fixed elevation="0" height="90" color="background" class="pb-4 nav-shadow nav-height">
       <v-container>
         <div class="d-flex">
           <v-col style="position: relative">
@@ -23,8 +23,25 @@
               </div>
             </v-toolbar-items>
           </v-col>
+          <v-col class="pa-0 flex-grow-1 align-center d-flex justify-end d-lg-none">
+            <v-btn icon @click="drawer = !drawer">
+              <v-icon>mdi-menu</v-icon>
+            </v-btn>
+          </v-col>
         </div>
       </v-container>
+
+      <v-navigation-drawer v-model="drawer" app right style="background-color: #fafff2 !important" class="d-lg-none">
+        <v-list class="my-4">
+          <v-list-item v-for="link in links" :key="link.to" link>
+            <v-list-item-content>
+              <router-link :to="link.to" style="text-decoration: none">
+                <v-list-item-title class="text-md">{{ link.name }}</v-list-item-title>
+              </router-link>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-navigation-drawer>
     </v-app-bar>
   </nav>
 </template>
@@ -55,6 +72,10 @@ export default {
 }
 
 @media screen and (max-width: 860px) {
+  .nav-height {
+    max-height: 90px !important;
+  }
+
   .logo-img {
     height: 42px;
     width: 42px;

@@ -46,7 +46,7 @@ export default {
 
 .about-bg {
   position: absolute;
-  top: 31.8%;
+  top: 30%;
   left: 0;
   width: 42%;
   max-width: 640px;
