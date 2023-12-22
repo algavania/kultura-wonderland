@@ -22,49 +22,39 @@
           </v-row>
         </v-container>
         <div class="py-16" style="position: relative">
-          <v-container class="pt-16 pb-16">
-            <v-row>
-              <v-col cols="2">
-                <div class="d-flex justify-center align-center" style="height: 100%">
-                  <img v-if="selectedCulture > 0" style="cursor: pointer" src="../assets/culture/arrow-left.svg"
-                    @click="onArrowTap(false)" />
-                </div>
-              </v-col>
-              <v-col cols="8">
-                <v-row>
-                  <v-col cols="6" class="bg-gradient book-style book-style-left pa-0" style="position: relative">
-                    <div class="bg-book pa-6" style="position: absolute; width: 100%"></div>
+          <v-container class="pt-8 pb-16 page-container">
+            <div style="width: 100%;">
+              <v-row style="max-width: 1000px; margin: 0 auto;">
+                <v-col cols="6" class="book bg-gradient book-style book-style-left pa-0" style="position: relative">
+                  <div class="bg-book pa-6" style="position: absolute; width: 100%"></div>
+                  <div style="width: 100%; height: 100%;" class="d-flex align-center justify-center">
                     <div class="d-flex justify-center align-center reveal-book">
                       <img :src="require(`@/assets/culture/${cultures[selectedCulture].fileName}.svg`)
-                        " style="z-index: 1" />
+                        " style="z-index: 1; width: 100%;" />
                     </div>
-                  </v-col>
-                  <v-col cols="6" class="bg-gradient pa-0 book-style book-style-right" style="position: relative">
-                    <div class="image-top reveal-book">
-                      <img :src="require(`@/assets/culture/${cultures[selectedCulture].fileName}-top.svg`)
-                        " />
-                    </div>
-                    <div class="bg-book pa-6" style="position: absolute; width: 100%">
+                  </div>
+                </v-col>
+                <v-col cols="6" class="book bg-gradient pa-0 book-style book-style-right" style="position: relative">
+                  <div class="image-top reveal-book">
+                    <img :src="require(`@/assets/culture/${cultures[selectedCulture].fileName}-top.svg`)
+                      " />
+                  </div>
+                  <div class="bg-book pa-6" style="position: absolute; width: 100%">
+                    <div style="height: 100%;" class="d-flex align-center">
                       <div class="reveal-book">
-                        <h1 class="text-md">Pulau</h1>
-                        <h1 class="font-playfair text-bg text-md">{{ cultures[selectedCulture].title }}</h1>
-                        <div class="text-sm mt-4">
+                        <h1 class="text-medium">Pulau</h1>
+                        <h1 class="font-playfair text-bg text-medium">{{ cultures[selectedCulture].title }}</h1>
+                        <div class="text-small mt-4">
                           <span class="font-weight-bold">{{
                             cultures[selectedCulture].culture
                           }}</span>{{ cultures[selectedCulture].cultureDescription }}
                         </div>
                       </div>
                     </div>
-                  </v-col>
-                </v-row>
-              </v-col>
-              <v-col cols="2">
-                <div class="d-flex justify-center align-center" style="height: 100%">
-                  <img v-if="selectedCulture < cultures.length - 1" style="cursor: pointer"
-                    src="../assets/culture/arrow-right.svg" @click="onArrowTap(true)" />
-                </div>
-              </v-col>
-            </v-row>
+                  </div>
+                </v-col>
+              </v-row>
+            </div>
           </v-container>
         </div>
       </div>
@@ -189,6 +179,10 @@ export default {
   top: -4.3rem !important;
 }
 
+.image-top img {
+  width: 14rem !important;
+}
+
 .top-text {
   text-align: center;
   font-size: 64px;
@@ -205,6 +199,10 @@ export default {
   width: 100%;
 }
 
+.book {
+  height: 30rem;
+}
+
 .reveal-book {
   opacity: 0;
   filter: blur(3px);
@@ -214,5 +212,57 @@ export default {
 .reveal-book.book-active {
   opacity: 1;
   filter: blur(0px);
+}
+
+.text-medium {
+  font-size: 1.7rem !important;
+}
+
+.text-small {
+  font-size: 1.04rem !important;
+  line-height: 200%;
+}
+
+@media (max-width: 960px) {
+  .image-top img {
+    width: 11rem !important;
+  }
+
+  .book {
+    height: 25rem;
+  }
+
+  .text-medium {
+    font-size: 1rem !important;
+  }
+
+  .text-small {
+    font-size: 0.8rem !important;
+    line-height: 180%;
+  }
+}
+
+@media (max-width: 600px) {
+  .book {
+    height: 22rem;
+  }
+
+  .image-top {
+    right: -3rem;
+    top: -2.4rem !important;
+  }
+
+  .image-top img {
+    width: 8rem !important;
+  }
+
+  .text-medium {
+    font-size: 0.9rem !important;
+  }
+
+  .text-small {
+    font-size: 0.6rem !important;
+  }
+
 }
 </style>
