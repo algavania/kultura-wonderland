@@ -1,5 +1,5 @@
 <template>
-  <div style="background-color: #FAFFF2;" class="pt-8 pt-lg-16">
+  <div style="background-color: #FAFFF2;">
     <div class="gradient-bg">
       <div class="bottom-bg">
         <div class="top-bg">
