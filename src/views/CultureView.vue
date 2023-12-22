@@ -11,12 +11,7 @@
             <v-col>
               <div class="d-flex align-center justify-center">
                 <router-link to="/" style="height: 100%">
-                  <img
-                    :src="require('@/assets/logo.svg')"
-                    alt="Logo"
-                    height="70%"
-                    class="d-block mr-2"
-                  />
+                  <img :src="require('@/assets/logo.svg')" alt="Logo" height="70%" class="d-block mr-2" />
                 </router-link>
                 <router-link to="/" style="text-decoration: none">
                   <h1 class="black--text text-md">Kultura</h1>
@@ -30,64 +25,29 @@
           <v-container class="pt-8 pb-16 page-container">
             <div style="width: 100%">
               <v-row>
-                <v-col
-                  class="d-none d-lg-block"
-                  cols="1"
-                  justify-center
-                  align-self="center"
-                >
-                  <img
-                    v-if="selectedCulture != 0"
-                    src="../assets/culture/arrow-left.svg"
-                    style="cursor: pointer"
-                    @click="previousPage()"
-                  />
+                <v-col class="d-none d-lg-block" cols="1" justify-center align-self="center">
+                  <img v-if="selectedCulture != 0" src="../assets/culture/arrow-left.svg" style="cursor: pointer"
+                    @click="previousPage()" />
                 </v-col>
                 <v-col>
                   <v-row style="max-width: 1000px; margin: 0 auto">
-                    <v-col
-                      @click="previousPage()"
-                      cols="6"
-                      class="book bg-gradient book-style book-style-left pa-0"
-                      style="position: relative; cursor: pointer"
-                    >
-                      <div
-                        class="bg-book pa-6"
-                        style="position: absolute; width: 100%"
-                      ></div>
-                      <div
-                        style="width: 100%; height: 100%"
-                        class="d-flex align-center justify-center"
-                      >
-                        <div
-                          class="d-flex justify-center align-center reveal-book"
-                        >
-                          <img
-                            :src="
-                              require(`@/assets/culture/${cultures[selectedCulture].fileName}.svg`)
-                            "
-                            style="z-index: 1; width: 100%"
-                          />
+                    <v-col @click="previousPage()" cols="6" class="book bg-gradient book-style book-style-left pa-0"
+                      style="position: relative; cursor: pointer">
+                      <div class="bg-book pa-6" style="position: absolute; width: 100%"></div>
+                      <div style="width: 100%; height: 100%" class="d-flex align-center justify-center">
+                        <div class="d-flex justify-center align-center reveal-book">
+                          <img :src="require(`@/assets/culture/${cultures[selectedCulture].fileName}.svg`)
+                            " style="z-index: 1; width: 100%" />
                         </div>
                       </div>
                     </v-col>
-                    <v-col
-                      @click="nextPage()"
-                      cols="6"
-                      class="book bg-gradient pa-0 book-style book-style-right"
-                      style="position: relative; cursor: pointer"
-                    >
+                    <v-col @click="nextPage()" cols="6" class="book bg-gradient pa-0 book-style book-style-right"
+                      style="position: relative; cursor: pointer">
                       <div class="image-top reveal-book">
-                        <img
-                          :src="
-                            require(`@/assets/culture/${cultures[selectedCulture].fileName}-top.svg`)
-                          "
-                        />
+                        <img :src="require(`@/assets/culture/${cultures[selectedCulture].fileName}-top.svg`)
+                          " />
                       </div>
-                      <div
-                        class="bg-book pa-6"
-                        style="position: absolute; width: 100%"
-                      >
+                      <div class="bg-book pa-6" style="position: absolute; width: 100%">
                         <div style="height: 100%" class="d-flex align-center">
                           <div class="reveal-book">
                             <h1 class="text-medium">Pulau</h1>
@@ -97,10 +57,9 @@
                             <div class="text-small mt-4">
                               <span class="font-weight-bold">{{
                                 cultures[selectedCulture].culture
-                              }}</span
-                              >{{
-                                cultures[selectedCulture].cultureDescription
-                              }}
+                              }}</span>{{
+  cultures[selectedCulture].cultureDescription
+}}
                             </div>
                           </div>
                         </div>
@@ -108,18 +67,9 @@
                     </v-col>
                   </v-row>
                 </v-col>
-                <v-col
-                  cols="1"
-                  justify-center
-                  align-self="center"
-                  class="d-none d-lg-block"
-                >
-                  <img
-                    v-if="selectedCulture != cultures.length - 1"
-                    src="../assets/culture/arrow-right.svg"
-                    style="cursor: pointer"
-                    @click="nextPage()"
-                  />
+                <v-col cols="1" justify-center align-self="center" class="d-none d-lg-block">
+                  <img v-if="selectedCulture != cultures.length - 1" src="../assets/culture/arrow-right.svg"
+                    style="cursor: pointer" @click="nextPage()" />
                 </v-col>
               </v-row>
             </div>
@@ -127,22 +77,14 @@
               <v-row>
                 <v-col>
                   <div class="d-flex justify-center align-center">
-                    <img
-                      v-if="selectedCulture != 0"
-                      src="../assets/culture/arrow-left.svg"
-                      style="cursor: pointer"
-                      @click="previousPage()"
-                    />
+                    <img v-if="selectedCulture != 0" class="bottom-arrow" src="../assets/culture/arrow-left.svg"
+                      style="cursor: pointer" @click="previousPage()" />
                   </div>
                 </v-col>
                 <v-col>
                   <div class="d-flex justify-center align-center">
-                    <img
-                      v-if="selectedCulture != cultures.length - 1"
-                      src="../assets/culture/arrow-right.svg"
-                      style="cursor: pointer"
-                      @click="nextPage()"
-                    />
+                    <img v-if="selectedCulture != cultures.length - 1" class="bottom-arrow"
+                      src="../assets/culture/arrow-right.svg" style="cursor: pointer" @click="nextPage()" />
                   </div>
                 </v-col>
               </v-row>
@@ -341,6 +283,10 @@ export default {
     font-size: 0.8rem !important;
     line-height: 180%;
   }
+
+  .bottom-arrow {
+    width: 5rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -375,6 +321,10 @@ export default {
 
   .top-text {
     font-size: 2rem;
+  }
+
+  .bottom-arrow {
+    width: 3.5rem;
   }
 }
 </style>

@@ -51,10 +51,12 @@
                         Tautan
                       </div>
                       <div v-for="link in links" :key="link.id" class="mt-1">
-                        <p @click="navigateTo(link.id)"
-                          class="text-color-white text-sm font-weight-light text-decoration-underline"
-                          style="cursor: pointer;">
-                          {{ link.name }}</p>
+                        <router-link to="/">
+                          <p @click="navigateTo(link.id)"
+                            class="text-color-white text-sm font-weight-light text-decoration-underline"
+                            style="cursor: pointer;">
+                            {{ link.name }}</p>
+                        </router-link>
                       </div>
                     </div>
                   </v-col>
