@@ -4,10 +4,8 @@
       <div class="top-bg">
         <v-container class="py-5" style="position: relative">
           <div
-            class="pa-8 px-12 background submission-bg"
+            class="pa-8 px-12 background pattern-bg default-border"
             style="
-              border-radius: 1rem;
-              border: 0.5px solid #c9e899;
               width: 45rem;
               position: absolute;
               top: -4rem;
@@ -71,8 +69,7 @@
             </v-col>
             <v-col>
               <div
-                style="border: 0.5px solid #c9e899; border-radius: 1rem"
-                class="pa-6 text-center"
+                class="default-border pa-6 text-center"
               >
                 <div class="text-small-md white--text font-weight-bold">
                   Gabung Komunitas🎉
@@ -134,11 +131,5 @@ export default {
   background-image: url("../assets/footer/bg-top.svg") !important;
   background-repeat: no-repeat !important;
   background-position: top right;
-}
-
-.submission-bg {
-  background-image: url("../assets/footer/pattern.svg") !important;
-  background-repeat: no-repeat !important;
-  background-size: cover;
 }
 </style>

@@ -25,6 +25,24 @@ export default {
   color: #182800;
 }
 
+.font-playfair {
+  font-family: "Playfair Display" !important;
+  font-weight: 500;
+  font-style: italic;
+  text-decoration-line: underline !important;
+}
+
+.font-gradient {
+  background: radial-gradient(50% 50% at 50% 50%, #78c601 0%, #487701 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-green {
+  border: 1px solid #78c601 !important;
+}
+
 .page-container {
   max-width: 1920px;
   margin: 0 auto;
@@ -52,7 +70,6 @@ export default {
 .text-small-md {
   font-size: 1.5rem !important;
 }
-
 
 /* 16px */
 .text-sm {
@@ -97,7 +114,11 @@ export default {
 }
 
 .gradient-bg {
-  background: radial-gradient(50% 50% at 50% 50%, #78C601 0%, #487701 100%)!important;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #78c601 0%,
+    #487701 100%
+  ) !important;
 }
 
 .button-filled {
@@ -117,7 +138,7 @@ export default {
   color: black !important;
   border-radius: 1000px !important;
   padding: 0.8rem 1.5rem !important;
-  background-color: white!important;
+  background-color: white !important;
   letter-spacing: 0 !important;
   font-size: 1.04rem !important;
   font-weight: 700 !important;
@@ -135,5 +156,32 @@ export default {
   font-size: 0.9rem !important;
   font-weight: 700 !important;
   box-shadow: none !important;
+  cursor: pointer;
+}
+
+.pattern-bg {
+  background-image: url("assets/footer/pattern.svg") !important;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+}
+
+.pattern-home-bg {
+  background-image: url("assets/home/pattern.svg") !important;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+}
+
+.default-border {
+  border-radius: 1rem !important;
+  border: 0.5px solid #c9e899 !important;
+  box-shadow: 0px -8px var(--32, 32px) 0px rgba(24, 40, 0, 0.04) !important;
+}
+
+.default-badge {
+  border-radius: 12px;
+  border: 1px solid #78c601;
+  background: #aedd67;
+  padding: 0.3rem 1.2rem;
+  font-weight: bold;
 }
 </style>
