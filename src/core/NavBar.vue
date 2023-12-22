@@ -33,9 +33,7 @@
         <v-list class="my-4">
           <v-list-item v-for="link in links" :key="link.id" link>
             <v-list-item-content>
-              <router-link :to="link.id" style="text-decoration: none">
-                <v-list-item-title class="text-md">{{ link.name }}</v-list-item-title>
-              </router-link>
+              <v-list-item-title @click="navigateTo(link.id)" class="text-md">{{ link.name }}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list>
