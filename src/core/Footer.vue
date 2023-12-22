@@ -1,6 +1,6 @@
 <template>
   <div style="background-color: #FAFFF2;">
-    <div class="gradient-bg mt-8 mt-lg-16">
+    <div class="gradient-bg">
       <div class="bottom-bg">
         <div class="top-bg">
           <div class="page-container">
