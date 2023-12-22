@@ -4,22 +4,23 @@
       <div class="top-bg">
         <v-container class="py-5" style="position: relative">
           <div
-            class="pa-8 px-12 background pattern-bg default-border"
-            style="
-              width: 45rem;
-              position: absolute;
-              top: -4rem;
-              left: 50%;
-              transform: translateX(-50%);
-            "
+            class="pa-4 pa-sm-8 px-12 background pattern-bg default-border footer-card"
           >
-            <div class="d-flex justify-space-between">
-              <div>Submisi Web untuk</div>
-              <div>Dibuat dengan 💚 oleh</div>
-            </div>
-            <div class="d-flex justify-space-between font-weight-bold text-sm">
+            <div class="d-block d-sm-none font-weight-bold text-sm text-center">
               <div>Techcomfest 2024</div>
               <div>Wonderland Team</div>
+            </div>
+            <div class="d-none d-sm-block">
+              <div class="d-flex justify-space-between">
+                <div>Submisi Web untuk</div>
+                <div>Dibuat dengan 💚 oleh</div>
+              </div>
+              <div
+                class="d-flex justify-space-between font-weight-bold text-sm"
+              >
+                <div>Techcomfest 2024</div>
+                <div>Wonderland Team</div>
+              </div>
             </div>
           </div>
           <div class="d-flex align-center my-4 mt-16">
@@ -36,7 +37,7 @@
             >
           </div>
           <v-row>
-            <v-col>
+            <v-col cols="12" md="6" lg="4">
               <div class="white--text text-sm font-weight-light">
                 Menerangi keberagaman budaya, memicu minat generasi muda dalam
                 warisan luntur melalui inspirasi, pengetahuan, dan pengalaman
@@ -52,8 +53,8 @@
                 </div>
               </v-row>
             </v-col>
-            <v-col>
-              <div style="display: grid" class="justify-center">
+            <v-col cols="12" md="6" lg="4">
+              <div style="display: grid" class="justify-sm-center">
                 <div class="text-small-md font-weight-bold white--text mb-6">
                   Tautan
                 </div>
@@ -67,10 +68,9 @@
                 </div>
               </div>
             </v-col>
-            <v-col>
-              <div
-                class="default-border pa-6 text-center"
-              >
+            <v-col class="d-none d-md-flex d-lg-none" md="3"></v-col>
+            <v-col cols="12" md="6" lg="4">
+              <div class="default-border pa-6 text-center">
                 <div class="text-small-md white--text font-weight-bold">
                   Gabung Komunitas🎉
                 </div>
@@ -88,6 +88,7 @@
                 </div>
               </div>
             </v-col>
+            <v-col class="d-none d-md-flex d-lg-none" md="3"></v-col>
           </v-row>
           <div
             class="white--text text-center text-sm font-weight-light mt-8 mb-3"
@@ -131,5 +132,25 @@ export default {
   background-image: url("../assets/footer/bg-top.svg") !important;
   background-repeat: no-repeat !important;
   background-position: top right;
+}
+
+.footer-card {
+  position: absolute;
+  top: -4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+}
+
+@media only screen and (max-width: 960px) {
+  .footer-card {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-card {
+    width: 90%;
+  }
 }
 </style>
