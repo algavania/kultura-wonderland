@@ -1,30 +1,27 @@
 <template>
-  <v-app style="background-color: #FAFFF2 !important;">
-    <!-- <NavBar /> -->
-
-    <v-main>
-      <router-view />
-    </v-main>
+  <v-app>
+    <NavBar />
+    <router-view class="pt-16 mt-16" style="height: 100%"></router-view>
+    <Footer />
   </v-app>
 </template>
 
 <script>
-// import NavBar from "./core/NavBar.vue";
+import NavBar from "./core/NavBar.vue";
+import Footer from "./core/Footer.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    // NavBar
+    NavBar,
+    Footer,
   },
-  data: () => ({
-
-  }),
 };
 </script>
 
 <style>
 * {
-  font-family: 'Sora', sans-serif !important;
+  font-family: "Sora", sans-serif !important;
   color: #182800;
 }
 
@@ -58,7 +55,7 @@ export default {
 }
 
 .text-color-primary {
-  background: radial-gradient(50% 50% at 50% 50%, #78C601 0%, #487701 100%);
+  background: radial-gradient(50% 50% at 50% 50%, #78c601 0%, #487701 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -67,8 +64,8 @@ export default {
 .text-accent {
   font-weight: 500 !important;
   font-style: italic !important;
-  font-family: 'Playfair Display', serif !important;
-  background: radial-gradient(50% 50% at 50% 50%, #78C601 0%, #487701 100%);
+  font-family: "Playfair Display", serif !important;
+  background: radial-gradient(50% 50% at 50% 50%, #78c601 0%, #487701 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -76,20 +73,25 @@ export default {
 }
 
 .text-accent::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 5.5px;
   width: 100%;
   height: 0.8px;
-  background-image: radial-gradient(50% 50% at 50% 50%, #78C601 0%, #487701 100%);
+  background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    #78c601 0%,
+    #487701 100%
+  );
 }
 
 .button-filled {
-  color: #FFFFFF !important;
+  color: #ffffff !important;
+  cursor: pointer!important;
   border-radius: 1000px !important;
   padding: 1.3rem 1.4rem !important;
-  background: radial-gradient(50% 50% at 50% 50%, #78C601 0%, #487701 100%);
+  background: radial-gradient(50% 50% at 50% 50%, #78c601 0%, #487701 100%);
   box-shadow: 0px var(--12, 12px) var(--24, 24px) 0px rgba(120, 198, 1, 0.64) !important;
   text-transform: capitalize !important;
   letter-spacing: 0 !important;
@@ -98,9 +100,10 @@ export default {
 }
 
 .button-outlined {
-  color: #60A001 !important;
-  background-color: #FAFFF2 !important;
-  border: 2px solid #78C601;
+  color: #60a001 !important;
+  cursor: pointer!important;
+  background-color: #fafff2 !important;
+  border: 2px solid #78c601;
   border-radius: 1000px !important;
   padding: 1.3rem 1.4rem !important;
   text-transform: capitalize !important;
@@ -112,6 +115,75 @@ export default {
 
 .flex-1 {
   flex: 1 !important;
+}
+
+.font-playfair {
+  font-family: "Playfair Display" !important;
+  font-weight: 500;
+  font-style: italic;
+  text-decoration-line: underline !important;
+}
+
+.font-gradient {
+  background: radial-gradient(50% 50% at 50% 50%, #78c601 0%, #487701 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-green {
+  border: 1px solid #78c601 !important;
+}
+
+.font-weight-semibold {
+  font-weight: 600 !important;
+}
+
+.gradient-bg {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #78c601 0%,
+    #487701 100%
+  ) !important;
+}
+
+.button-default {
+  color: black !important;
+  border-radius: 1000px !important;
+  background-color: white !important;
+  letter-spacing: 0 !important;
+  font-size: 1.04rem !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+  text-align: center;
+  padding: 1.3rem 1.4rem !important;
+  text-transform: none !important;
+
+}
+.pattern-bg {
+  background-image: url("assets/footer/pattern.svg") !important;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+}
+
+.pattern-home-bg {
+  background-image: url("assets/home/pattern.svg") !important;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+}
+
+.default-border {
+  border-radius: 1rem !important;
+  border: 0.5px solid #c9e899 !important;
+  box-shadow: 0px -8px var(--32, 32px) 0px rgba(24, 40, 0, 0.04) !important;
+}
+
+.default-badge {
+  border-radius: 12px;
+  border: 1px solid #78c601;
+  background: #aedd67;
+  padding: 0.3rem 1.2rem;
+  font-weight: bold;
 }
 
 @media (max-width: 960px) {
@@ -143,7 +215,6 @@ export default {
   .button-outlined {
     padding: 1rem 1.4rem !important;
     font-size: 0.8rem !important;
-
   }
 }
 
@@ -176,7 +247,6 @@ export default {
   .button-outlined {
     padding: 1rem 1.2rem !important;
     font-size: 0.7rem !important;
-
   }
 }
 </style>

@@ -4,24 +4,56 @@ import HomeView from '../views/HomeView.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
-
 const router = new VueRouter({
-  routes
-})
+  mode: "history",
+  scrollBehavior() {
+    return {
+      x: 0,
+      y: 0,
+    };
+  },
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: HomeView
+    },
+  ]
+});
 
-export default router
+function nextFactory(context, middleware, index) {
+  const subsequentMiddleware = middleware[index];
+  if (!subsequentMiddleware) return context.next;
+  return (...parameters) => {
+    context.next(...parameters);
+    const nextMiddleware = nextFactory(context, middleware, index + 1);
+    subsequentMiddleware({
+      ...context,
+      next: nextMiddleware,
+    });
+  };
+}
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.middleware) {
+    const middleware = Array.isArray(to.meta.middleware)
+      ? to.meta.middleware
+      : [to.meta.middleware];
+
+    const context = {
+      from,
+      next,
+      router,
+      to,
+    };
+
+    const nextMiddleware = nextFactory(context, middleware, 1);
+    return middleware[0]({
+      ...context,
+      next: nextMiddleware,
+    });
+  }
+  return next();
+});
+
+export default router;

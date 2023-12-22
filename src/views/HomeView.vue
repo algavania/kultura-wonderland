@@ -1,5 +1,5 @@
 <template>
-  <div class="page-container relative">
+  <div class="page-container relative background pb-16 mb-16">
     <div class="relative">
       <img :src="require('@/assets/bg_hero.svg')" class="hero-bg" />
       <HeroComponent class="front" />
@@ -8,20 +8,22 @@
       <img :src="require('@/assets/bg_about.svg')" class="about-bg" />
       <AboutComponent class="front" />
     </div>
+    <CultureComponent />
   </div>
 </template>
 
 <script>
-import HeroComponent from '@/components/Landing/HeroComponent.vue'
-import AboutComponent from '@/components/Landing/AboutComponent.vue'
-
+import HeroComponent from "@/components/Landing/HeroComponent.vue";
+import AboutComponent from "@/components/Landing/AboutComponent.vue";
+import CultureComponent from "@/components/Landing/CultureComponent.vue";
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   components: {
     HeroComponent,
     AboutComponent,
+    CultureComponent,
   },
-}
+};
 </script>
 
 <style>
