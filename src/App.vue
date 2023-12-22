@@ -59,7 +59,7 @@ export default {
 
 /* 48px */
 .text-lg {
-  font-size: 2.7rem !important;
+  font-size: 2.6rem !important;
   line-height: 120%;
 }
 
@@ -99,11 +99,9 @@ export default {
   bottom: 5.5px;
   width: 100%;
   height: 0.8px;
-  background-image: radial-gradient(
-    50% 50% at 50% 50%,
-    #78c601 0%,
-    #487701 100%
-  );
+  background-image: radial-gradient(50% 50% at 50% 50%,
+      #78c601 0%,
+      #487701 100%);
 }
 
 .button-filled {
@@ -164,11 +162,9 @@ export default {
 }
 
 .gradient-bg {
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    #78c601 0%,
-    #487701 100%
-  ) !important;
+  background: radial-gradient(50% 50% at 50% 50%,
+      #78c601 0%,
+      #487701 100%) !important;
 }
 
 .button-default {
@@ -183,6 +179,7 @@ export default {
   padding: 1.3rem 1.4rem !important;
   text-transform: none !important;
 }
+
 .pattern-bg {
   background-image: url("assets/footer/pattern.svg") !important;
   background-repeat: no-repeat !important;

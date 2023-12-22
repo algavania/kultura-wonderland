@@ -1,5 +1,5 @@
 <template>
-  <div class="page-container relative background pb-16 mb-16">
+  <div class="page-container relative background pb-16">
     <div class="relative">
       <img :src="require('@/assets/bg_hero.svg')" class="hero-bg" />
       <HeroComponent class="front" />
@@ -44,7 +44,7 @@ export default {
 
 .about-bg {
   position: absolute;
-  bottom: 12.5rem;
+  top: 24%;
   left: 0;
   width: 42%;
   max-width: 640px;
@@ -56,7 +56,7 @@ export default {
   }
 
   .about-bg {
-    bottom: 41rem;
+    top: 13%;
     width: 38%;
   }
 }

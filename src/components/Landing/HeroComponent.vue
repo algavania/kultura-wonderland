@@ -1,5 +1,5 @@
 <template>
-    <div class="text-center pt-10 ">
+    <div class="text-center pt-4 pt-lg-10 ">
         <h1 class="text-xl heading">
             <span class="text-color-primary">“</span>Budaya <span class="text-accent">Tak
                 Lekang</span> oleh Zaman, Kita Lestarikan
