@@ -15,11 +15,9 @@
           </v-col>
           <v-col class="flex-grow-1 align-center d-flex justify-end">
             <v-toolbar-items class="toolbar-item">
-              <div v-for="link in links" :key="link.to">
-                <v-btn v-if="link.to == $route.path" :class="link.to == $route.path ? 'button-filled' : ''">{{
-                  link.name
-                }}</v-btn>
-                <div v-else class="font-weight-semibold py-2 px-5 ml-3" style="cursor: pointer;">{{ link.name }}</div>
+              <div v-for="link in links" :key="link.id">
+                <div @click="navigateTo(link.id)" class="font-weight-semibold py-2 px-5 ml-3" style="cursor: pointer;">{{
+                  link.name }}</div>
               </div>
             </v-toolbar-items>
           </v-col>
@@ -33,9 +31,9 @@
 
       <v-navigation-drawer v-model="drawer" app right style="background-color: #fafff2 !important" class="d-lg-none">
         <v-list class="my-4">
-          <v-list-item v-for="link in links" :key="link.to" link>
+          <v-list-item v-for="link in links" :key="link.id" link>
             <v-list-item-content>
-              <router-link :to="link.to" style="text-decoration: none">
+              <router-link :to="link.id" style="text-decoration: none">
                 <v-list-item-title class="text-md">{{ link.name }}</v-list-item-title>
               </router-link>
             </v-list-item-content>
@@ -51,13 +49,20 @@ export default {
   name: "NavBar",
   data: () => ({
     links: [
-      { name: "Beranda", to: "/" },
-      { name: "Tentang", to: "/about" },
-      { name: "Budaya", to: "/culture" },
-      { name: "Acara", to: "/event" },
+      { name: "Beranda", id: "hero" },
+      { name: "Tentang", id: "about" },
+      { name: "Budaya", id: "culture" },
     ],
     drawer: false,
   }),
+  methods: {
+    navigateTo(id) {
+      document.getElementById(id).scrollIntoView({
+        behavior: "smooth",
+        block: id == 'about' ? "center" : "start",
+      });
+    },
+  }
 };
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <section class="my-16 pt-6 pt-lg-16">
+  <section id="culture" class="my-16 pt-6 pt-lg-16">
     <div class="mt-8">
       <div class="align-center d-flex flex-gap flex-column flex-lg-row">
         <v-col class="image-col flex-1">
@@ -7,7 +7,7 @@
             <img src="../../assets/home/culture1.svg" width="100%" height="100%" />
           </div>
         </v-col>
-        <v-col>
+        <v-col class="reveal">
           <div class="flex-1">
             <div class="default-badge" style="width: fit-content">
               Budaya Kuno
@@ -29,7 +29,7 @@
               tradisi dan kesenian tradisional yang telah diwariskan
               turun-temurun mulai ditinggalkan oleh generasi muda.
             </div>
-            <v-btn class="button-outlined mt-8">
+            <v-btn class="button-outlined mt-8" to="/culture">
               Jelajahi Sekarang
             </v-btn>
           </div>
@@ -39,7 +39,7 @@
 
     <div class="mt-16 pt-4 pt-lg-16">
       <div class="align-center d-flex flex-gap flex-column flex-lg-row">
-        <v-col class="flex-1 order-2 order-lg-1">
+        <v-col class="flex-1 order-2 order-lg-1 reveal">
           <div>
             <div class="default-badge" style="width: fit-content">
               Budaya Daerah
@@ -56,7 +56,7 @@
                 dari kekuatan, keberanian, dan kesiapan masyarakat Dayak</b> untuk
               mempertahankan tanah airnya.
             </div>
-            <v-btn class="button-outlined mt-8">
+            <v-btn class="button-outlined mt-8" to="/culture">
               Jelajahi Sekarang
             </v-btn>
           </div>

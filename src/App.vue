@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <NavBar v-if="isShowAppBar" />
-    <div v-if="isShowAppBar" class="pb-16 background"></div>
+    <div v-if="isShowAppBar" class="pb-16 pt-12 background"></div>
     <router-view style="height: 100%"></router-view>
     <Footer />
   </v-app>
@@ -15,6 +15,7 @@ export default {
   name: "App",
   data: () => ({
     isShowAppBar: true,
+    revealElements: [],
   }),
   created() {
     this.$watch(
@@ -23,9 +24,12 @@ export default {
         this.checkAppBar();
       }
     );
+
+    window.addEventListener("scroll", this.reveal);
   },
   mounted() {
     this.checkAppBar();
+    this.reveal();
   },
   components: {
     NavBar,
@@ -34,6 +38,18 @@ export default {
   methods: {
     checkAppBar() {
       this.isShowAppBar = this.$route.path != "/culture";
+    },
+    reveal() {
+      const revealElements = document.querySelectorAll(".reveal");
+      for (let i = 0; i < revealElements.length; i++) {
+        let windowheight = window.innerHeight;
+        let revealtop = revealElements[i].getBoundingClientRect().top;
+        let revealpoint = 200;
+
+        if (revealtop < windowheight - revealpoint) {
+          revealElements[i].classList.add("active");
+        }
+      }
     },
   },
 };
@@ -213,12 +229,27 @@ export default {
   background-repeat: no-repeat !important;
   background-position: bottom left;
 }
+
 .top-bg {
   background-image: url("assets/footer/bg-top.svg") !important;
   background-repeat: no-repeat !important;
   background-position: top right;
   width: 100%;
   height: 100%;
+}
+
+.reveal {
+  position: relative;
+  transform: translateX(-25px);
+  opacity: 0;
+  filter: blur(3px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+  filter: blur(0px);
 }
 
 @media (max-width: 960px) {
