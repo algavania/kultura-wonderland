@@ -21,7 +21,7 @@
                   </div>
                 </div>
               </div>
-              <div class="d-flex align-center mb-5 mt-10 mt-lg-16 pt-8">
+              <div class="d-flex align-center mb-5 mt-16 pt-16">
                 <router-link to="/" style="height: 100%">
                   <img :src="require('@/assets/logo-white.svg')" alt="Logo" class="d-block mr-3 mr-lg-4 logo-size" />
                 </router-link>
@@ -43,7 +43,7 @@
                   </v-row>
                 </v-col>
                 <v-col cols="12" md="6" lg="4">
-                  <div style="display: grid" class="justify-sm-center my-8 my-lg-0">
+                  <div style="display: grid" class="justify-sm-center">
                     <div class="text-sm font-weight-bold text-color-white mb-4">
                       Tautan
                     </div>
@@ -105,17 +105,6 @@ export default {
 </script>
 
 <style scoped>
-.bottom-bg {
-  background-image: url("../assets/footer/bg-bottom.svg") !important;
-  background-repeat: no-repeat !important;
-  background-position: bottom left;
-}
-
-.top-bg {
-  background-image: url("../assets/footer/bg-top.svg") !important;
-  background-repeat: no-repeat !important;
-  background-position: top right;
-}
 
 .footer-card {
   position: absolute;
@@ -138,6 +127,14 @@ export default {
 .logo-size {
   width: 3.5rem !important;
 }
+
+@media only screen and (max-width: 1024px) {
+  .footer-card {
+    width: 60%;
+  }
+
+}
+
 
 @media only screen and (max-width: 960px) {
   .footer-card {

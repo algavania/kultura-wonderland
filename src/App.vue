@@ -1,7 +1,8 @@
 <template>
   <v-app>
-    <NavBar />
-    <router-view class="pt-16 mt-16" style="height: 100%"></router-view>
+    <NavBar v-if="isShowAppBar" />
+    <div v-if="isShowAppBar" class="pb-16 background"></div>
+    <router-view style="height: 100%"></router-view>
     <Footer />
   </v-app>
 </template>
@@ -12,9 +13,28 @@ import Footer from "./core/Footer.vue";
 
 export default {
   name: "App",
+  data: () => ({
+    isShowAppBar: true,
+  }),
+  created() {
+    this.$watch(
+      () => this.$route.path,
+      () => {
+        this.checkAppBar();
+      }
+    );
+  },
+  mounted() {
+    this.checkAppBar();
+  },
   components: {
     NavBar,
     Footer,
+  },
+  methods: {
+    checkAppBar() {
+      this.isShowAppBar = this.$route.path != "/culture";
+    },
   },
 };
 </script>
@@ -129,6 +149,10 @@ export default {
   -webkit-text-fill-color: transparent;
 }
 
+.bg-gradient {
+  background: radial-gradient(50% 50% at 50% 50%, #bdbf77 0%, #898c35 100%);
+}
+
 .border-green {
   border: 1px solid #78c601 !important;
 }
@@ -154,7 +178,6 @@ export default {
   text-align: center;
   padding: 1.3rem 1.4rem !important;
   text-transform: none !important;
-
 }
 
 .pattern-bg {
@@ -181,6 +204,21 @@ export default {
   background: #aedd67;
   padding: 0.3rem 1.2rem;
   font-weight: bold;
+  width: 100%;
+  height: 100%;
+}
+
+.bottom-bg {
+  background-image: url("assets/footer/bg-bottom.svg") !important;
+  background-repeat: no-repeat !important;
+  background-position: bottom left;
+}
+.top-bg {
+  background-image: url("assets/footer/bg-top.svg") !important;
+  background-repeat: no-repeat !important;
+  background-position: top right;
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 960px) {

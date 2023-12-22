@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import CultureView from '../views/CultureView.vue'
 
 Vue.use(VueRouter)
 
@@ -17,6 +18,11 @@ const router = new VueRouter({
       path: '/',
       name: 'home',
       component: HomeView
+    },
+    {
+      path: '/culture',
+      name: 'culture',
+      component: CultureView
     },
   ]
 });
