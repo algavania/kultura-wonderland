@@ -54,7 +54,6 @@ export default {
       { name: "Beranda", to: "/" },
       { name: "Tentang", to: "/about" },
       { name: "Budaya", to: "/culture" },
-      { name: "Acara", to: "/event" },
     ],
     drawer: false,
   }),
