@@ -1,55 +1,182 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
+  <v-app style="background-color: #FAFFF2 !important;">
+    <!-- <NavBar /> -->
 
     <v-main>
-      <router-view/>
+      <router-view />
     </v-main>
   </v-app>
 </template>
 
 <script>
+// import NavBar from "./core/NavBar.vue";
 
 export default {
   name: 'App',
-
+  components: {
+    // NavBar
+  },
   data: () => ({
-    //
+
   }),
 };
 </script>
+
+<style>
+* {
+  font-family: 'Sora', sans-serif !important;
+  color: #182800;
+}
+
+.page-container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 8rem;
+}
+
+/* 56px */
+.text-xl {
+  font-size: 3rem !important;
+  line-height: 130%;
+}
+
+/* 48px */
+.text-lg {
+  font-size: 2.7rem !important;
+  line-height: 120%;
+}
+
+/* 32px */
+.text-md {
+  font-size: 1.7rem !important;
+}
+
+/* 16px */
+.text-sm {
+  font-size: 1.04rem !important;
+  line-height: 200%;
+}
+
+.text-color-primary {
+  background: radial-gradient(50% 50% at 50% 50%, #78C601 0%, #487701 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-accent {
+  font-weight: 500 !important;
+  font-style: italic !important;
+  font-family: 'Playfair Display', serif !important;
+  background: radial-gradient(50% 50% at 50% 50%, #78C601 0%, #487701 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.text-accent::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 5.5px;
+  width: 100%;
+  height: 0.8px;
+  background-image: radial-gradient(50% 50% at 50% 50%, #78C601 0%, #487701 100%);
+}
+
+.button-filled {
+  color: #FFFFFF !important;
+  border-radius: 1000px !important;
+  padding: 1.3rem 1.4rem !important;
+  background: radial-gradient(50% 50% at 50% 50%, #78C601 0%, #487701 100%);
+  box-shadow: 0px var(--12, 12px) var(--24, 24px) 0px rgba(120, 198, 1, 0.64) !important;
+  text-transform: capitalize !important;
+  letter-spacing: 0 !important;
+  font-size: 0.9rem !important;
+  font-weight: 700 !important;
+}
+
+.button-outlined {
+  color: #60A001 !important;
+  background-color: #FAFFF2 !important;
+  border: 2px solid #78C601;
+  border-radius: 1000px !important;
+  padding: 1.3rem 1.4rem !important;
+  text-transform: capitalize !important;
+  letter-spacing: 0 !important;
+  font-size: 0.9rem !important;
+  font-weight: 700 !important;
+  box-shadow: none !important;
+}
+
+.flex-1 {
+  flex: 1 !important;
+}
+
+@media (max-width: 960px) {
+  .page-container {
+    padding: 0 4rem;
+  }
+
+  /* 56px */
+  .text-xl {
+    font-size: 2rem !important;
+  }
+
+  /* 48px */
+  .text-lg {
+    font-size: 1.7rem !important;
+  }
+
+  /* 32px */
+  .text-md {
+    font-size: 1.1rem !important;
+  }
+
+  /* 16px */
+  .text-sm {
+    font-size: 0.9rem !important;
+  }
+
+  .button-filled,
+  .button-outlined {
+    padding: 1rem 1.4rem !important;
+    font-size: 0.8rem !important;
+
+  }
+}
+
+@media (max-width: 600px) {
+  .page-container {
+    padding: 0 2.5rem;
+  }
+
+  /* 56px */
+  .text-xl {
+    font-size: 1.7rem !important;
+  }
+
+  /* 48px */
+  .text-lg {
+    font-size: 1.6rem !important;
+  }
+
+  /* 32px */
+  .text-md {
+    font-size: 1rem !important;
+  }
+
+  /* 16px */
+  .text-sm {
+    font-size: 0.8rem !important;
+  }
+
+  .button-filled,
+  .button-outlined {
+    padding: 1rem 1.2rem !important;
+    font-size: 0.7rem !important;
+
+  }
+}
+</style>
