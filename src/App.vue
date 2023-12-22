@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <NavBar v-if="isShowAppBar" />
-    <div v-if="isShowAppBar" class="pb-16 background"></div>
+    <div v-if="isShowAppBar" class="pb-16 pt-12 background"></div>
     <router-view style="height: 100%"></router-view>
     <Footer />
   </v-app>
