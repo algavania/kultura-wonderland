@@ -1,5 +1,5 @@
 <template>
-  <div class="page-container relative background pb-16 mb-16">
+  <div class="page-container relative background pb-16">
     <div class="relative">
       <img :src="require('@/assets/bg_hero.svg')" class="hero-bg" />
       <HeroComponent class="front" />
@@ -8,7 +8,9 @@
       <img :src="require('@/assets/bg_about.svg')" class="about-bg" />
       <AboutComponent class="front" />
     </div>
-    <CultureComponent />
+    <div class="pb-16 mb-lg-16">
+      <CultureComponent />
+    </div>
   </div>
 </template>
 
@@ -44,7 +46,7 @@ export default {
 
 .about-bg {
   position: absolute;
-  bottom: 12.5rem;
+  top: 31.8%;
   left: 0;
   width: 42%;
   max-width: 640px;
@@ -56,7 +58,7 @@ export default {
   }
 
   .about-bg {
-    bottom: 41rem;
+    top: 21%;
     width: 38%;
   }
 }

@@ -1,16 +1,10 @@
 <template>
-  <section class="culture-section my-16">
-    <div>
-      <v-row>
-        <v-col
-          class="image-col"
-        >
+  <section class="culture-section my-16 pt-4 pt-md-10 pt-lg-16">
+    <div class="mt-8">
+      <v-row class="align-center">
+        <v-col class="image-col">
           <div class="pa-6 default-border pattern-home-bg">
-            <img
-              src="../../assets/home/culture1.svg"
-              width="100%"
-              height="100%"
-            />
+            <img src="../../assets/home/culture1.svg" width="100%" height="100%" />
           </div>
         </v-col>
         <v-col class="content-col">
@@ -28,9 +22,7 @@
               <span class="font-weight-bold">Budaya lama Indonesia</span>
               merupakan kekayaan yang tak ternilai harganya. Budaya lama
               Indonesia
-              <span class="font-weight-bold"
-                >cerminan wujud kearifan lokal</span
-              >
+              <span class="font-weight-bold">cerminan wujud kearifan lokal</span>
               yang sarat akan nilai-nilai luhur, seperti gotong royong,
               toleransi, dan cinta tanah air. Namun, di tengah arus globalisasi
               yang semakin deras, budaya lama Indonesia kian tergeser. Berbagai
@@ -38,7 +30,7 @@
               turun-temurun mulai ditinggalkan oleh generasi muda.
             </div>
             <v-btn class="button-outlined mt-8">
-                Jelajahi Sekarang
+              Jelajahi Sekarang
             </v-btn>
           </div>
 
@@ -57,14 +49,12 @@
               gadis Dayak yang sedang bersiaga menghadapi musuh. Tari Kancet
               Ledo memiliki makna yang mendalam bagi masyarakat Dayak. Tari ini
               merupakan
-              <span class="font-weight-bold"
-                >simbol dari kekuatan, keberanian, dan kesiapan masyarakat
-                Dayak</span
-              >
+              <span class="font-weight-bold">simbol dari kekuatan, keberanian, dan kesiapan masyarakat
+                Dayak</span>
               untuk mempertahankan tanah airnya.
             </div>
             <v-btn class="button-outlined mt-8">
-                Jelajahi Sekarang
+              Jelajahi Sekarang
             </v-btn>
           </div>
         </v-col>
@@ -81,17 +71,17 @@ export default {
 
 <style scoped>
 .culture-section {
-  height: 40rem!important;
+  height: 40rem !important;
 }
 
 .image-col {
-  position: sticky!important;
-  top: 0!important;
-  height: 100%!important;
+  position: sticky !important;
+  top: 0 !important;
+  height: 100% !important;
 }
 
 .content-col {
-  overflow-y: scroll!important;
-  height: 40rem!important;
+  overflow-y: scroll !important;
+  height: 40rem !important;
 }
 </style>

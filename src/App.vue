@@ -39,7 +39,7 @@ export default {
 
 /* 48px */
 .text-lg {
-  font-size: 2.7rem !important;
+  font-size: 2.6rem !important;
   line-height: 120%;
 }
 
@@ -79,16 +79,14 @@ export default {
   bottom: 5.5px;
   width: 100%;
   height: 0.8px;
-  background-image: radial-gradient(
-    50% 50% at 50% 50%,
-    #78c601 0%,
-    #487701 100%
-  );
+  background-image: radial-gradient(50% 50% at 50% 50%,
+      #78c601 0%,
+      #487701 100%);
 }
 
 .button-filled {
   color: #ffffff !important;
-  cursor: pointer!important;
+  cursor: pointer !important;
   border-radius: 1000px !important;
   padding: 1.3rem 1.4rem !important;
   background: radial-gradient(50% 50% at 50% 50%, #78c601 0%, #487701 100%);
@@ -101,7 +99,7 @@ export default {
 
 .button-outlined {
   color: #60a001 !important;
-  cursor: pointer!important;
+  cursor: pointer !important;
   background-color: #fafff2 !important;
   border: 2px solid #78c601;
   border-radius: 1000px !important;
@@ -140,11 +138,9 @@ export default {
 }
 
 .gradient-bg {
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    #78c601 0%,
-    #487701 100%
-  ) !important;
+  background: radial-gradient(50% 50% at 50% 50%,
+      #78c601 0%,
+      #487701 100%) !important;
 }
 
 .button-default {
@@ -160,6 +156,7 @@ export default {
   text-transform: none !important;
 
 }
+
 .pattern-bg {
   background-image: url("assets/footer/pattern.svg") !important;
   background-repeat: no-repeat !important;

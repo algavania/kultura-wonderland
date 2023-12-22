@@ -1,27 +1,16 @@
 <template>
   <nav class="pa-0" elevation="0" style="z-index: 100 !important">
-    <v-app-bar
-      fixed
-      elevation="0"
-      height="100"
-      color="background"
-      class="pt-1 pb-4"
-    >
+    <v-app-bar fixed elevation="0" height="100" color="background" class="pb-4 nav-shadow">
       <v-container>
         <div class="d-flex">
           <v-col style="position: relative">
             <div class="d-flex align-center">
               <router-link to="/" style="height: 100%">
-                <img
-                  :src="require('@/assets/logo.svg')"
-                  alt="Logo"
-                  height="70%"
-                  class="d-block mr-2"
-                />
+                <img :src="require('@/assets/logo.svg')" alt="Logo" height="70%" class="d-block mr-2" />
               </router-link>
               <router-link to="/" style="text-decoration: none">
-                <h1 class="black--text text-md">Kultura</h1></router-link
-              >
+                <h1 class="black--text text-md">Kultura</h1>
+              </router-link>
             </div>
           </v-col>
           <v-col class="flex-grow-1 align-center d-flex justify-end">
@@ -56,9 +45,15 @@ export default {
 </script>
 
 <style scoped>
+.nav-shadow {
+  box-shadow: 0px var(--8, 8px) var(--32, 32px) 0px rgba(24, 40, 0, 0.04) !important;
+  backdrop-filter: blur(calc(var(--56, 56px) / 2)) !;
+}
+
 .appbar-icon {
   display: none;
 }
+
 @media screen and (max-width: 860px) {
   .logo-img {
     height: 42px;
