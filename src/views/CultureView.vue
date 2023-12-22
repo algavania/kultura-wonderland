@@ -21,10 +21,10 @@
             <v-col></v-col>
           </v-row>
         </v-container>
-        <div class="py-16 page-container" style="position: relative">
+        <div class="py-16" style="position: relative">
           <v-container class="pt-16 pb-16">
             <v-row>
-              <v-col>
+              <v-col cols="2">
                 <div class="d-flex justify-center align-center" style="height: 100%">
                   <img v-if="selectedCulture > 0" style="cursor: pointer" src="../assets/culture/arrow-left.svg"
                     @click="onArrowTap(false)" />
@@ -58,7 +58,7 @@
                   </v-col>
                 </v-row>
               </v-col>
-              <v-col>
+              <v-col cols="2">
                 <div class="d-flex justify-center align-center" style="height: 100%">
                   <img v-if="selectedCulture < cultures.length - 1" style="cursor: pointer"
                     src="../assets/culture/arrow-right.svg" @click="onArrowTap(true)" />
