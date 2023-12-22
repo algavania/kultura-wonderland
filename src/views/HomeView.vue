@@ -8,9 +8,7 @@
       <img :src="require('@/assets/bg_about.svg')" class="about-bg" />
       <AboutComponent class="front" />
     </div>
-    <div class="pb-16 mb-lg-16">
-      <CultureComponent />
-    </div>
+    <CultureComponent />
   </div>
 </template>
 
@@ -46,7 +44,7 @@ export default {
 
 .about-bg {
   position: absolute;
-  top: 30%;
+  top: 24%;
   left: 0;
   width: 42%;
   max-width: 640px;
@@ -58,7 +56,7 @@ export default {
   }
 
   .about-bg {
-    top: 21%;
+    top: 13%;
     width: 38%;
   }
 }

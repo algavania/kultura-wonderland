@@ -1,22 +1,22 @@
 <template>
-  <section class="culture-section my-16 pt-4 pt-md-10 pt-lg-16">
+  <section class="my-16 pt-6 pt-lg-16">
     <div class="mt-8">
-      <v-row class="align-center">
-        <v-col class="image-col">
+      <div class="align-center d-flex flex-gap flex-column flex-lg-row">
+        <v-col class="image-col flex-1">
           <div class="pa-6 default-border pattern-home-bg">
             <img src="../../assets/home/culture1.svg" width="100%" height="100%" />
           </div>
         </v-col>
-        <v-col class="content-col">
-          <div class="ml-6">
+        <v-col>
+          <div class="flex-1">
             <div class="default-badge" style="width: fit-content">
               Budaya Kuno
             </div>
             <div class="text-lg font-weight-bold my-6">
               Bangkitkan
-              <span class="font-playfair font-gradient">Budaya lama,</span>
+              <span class="font-playfair font-gradient">Budaya Lama,</span>
               Wujud Kearifan
-              <span class="font-playfair font-gradient">lokal Indonesia.</span>
+              <span class="font-playfair font-gradient">Lokal Indonesia.</span>
             </div>
             <div class="text-sm">
               <span class="font-weight-bold">Budaya lama Indonesia</span>
@@ -33,33 +33,42 @@
               Jelajahi Sekarang
             </v-btn>
           </div>
+        </v-col>
+      </div>
+    </div>
 
-          <div class="ml-6" style="margin-top: 4rem">
+    <div class="mt-16 pt-4 pt-lg-16">
+      <div class="align-center d-flex flex-gap flex-column flex-lg-row">
+        <v-col class="flex-1 order-2 order-lg-1">
+          <div>
             <div class="default-badge" style="width: fit-content">
               Budaya Daerah
             </div>
             <div class="text-lg font-weight-bold my-6">
-              Tari Kancet Ledo: Tari Perang Asal
-              <span class="font-playfair font-gradient">Suku Dayak</span>
+              Tari Kancet Ledo: Tari Perang Asal <span class="font-playfair font-gradient">Suku Dayak</span>
             </div>
             <div class="text-sm">
-              <span class="font-weight-bold">Tari Kancet Ledo</span>
-              merupakan salah satu tari Dayak yang berasal dari Kalimantan
-              Timur. Tari ini merupakan tari perang yang menggambarkan seorang
-              gadis Dayak yang sedang bersiaga menghadapi musuh. Tari Kancet
-              Ledo memiliki makna yang mendalam bagi masyarakat Dayak. Tari ini
-              merupakan
-              <span class="font-weight-bold">simbol dari kekuatan, keberanian, dan kesiapan masyarakat
-                Dayak</span>
-              untuk mempertahankan tanah airnya.
+              <b>Tari Kancet Ledo</b> merupakan salah satu tari Dayak yang berasal
+              dari Kalimantan Timur. Tari ini merupakan tari perang yang
+              menggambarkan seorang gadis Dayak yang sedang bersiaga
+              menghadapi musuh. Tari Kancet Ledo memiliki makna yang
+              mendalam bagi masyarakat Dayak. Tari ini merupakan <b>simbol
+                dari kekuatan, keberanian, dan kesiapan masyarakat Dayak</b> untuk
+              mempertahankan tanah airnya.
             </div>
             <v-btn class="button-outlined mt-8">
               Jelajahi Sekarang
             </v-btn>
           </div>
         </v-col>
-      </v-row>
+        <v-col class="image-col flex-1 order-1 order-lg-2">
+          <div class="pa-6 default-border pattern-home-bg">
+            <img src="../../assets/home/culture2.svg" width="100%" height="100%" />
+          </div>
+        </v-col>
+      </div>
     </div>
+
   </section>
 </template>
 
@@ -70,18 +79,23 @@ export default {
 </script>
 
 <style scoped>
-.culture-section {
-  height: 40rem !important;
-}
-
 .image-col {
-  position: sticky !important;
-  top: 0 !important;
-  height: 100% !important;
+  width: 100% !important;
 }
 
-.content-col {
-  overflow-y: scroll !important;
-  height: 40rem !important;
+.flex-gap {
+  gap: 4rem;
+}
+
+@media (max-width: 960px) {
+  .flex-gap {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .flex-gap {
+    gap: 2rem;
+  }
 }
 </style>
