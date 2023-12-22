@@ -42,9 +42,26 @@ export default {
 
 .about-bg {
   position: absolute;
-  bottom: 14rem;
+  bottom: 12.5rem;
   left: 0;
   width: 42%;
   max-width: 640px;
+}
+
+@media (max-width: 960px) {
+  .hero-bg {
+    top: 6rem;
+  }
+
+  .about-bg {
+    bottom: 41rem;
+    width: 38%;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-bg {
+    display: none;
+  }
 }
 </style>

@@ -113,4 +113,70 @@ export default {
 .flex-1 {
   flex: 1 !important;
 }
+
+@media (max-width: 960px) {
+  .page-container {
+    padding: 0 4rem;
+  }
+
+  /* 56px */
+  .text-xl {
+    font-size: 2rem !important;
+  }
+
+  /* 48px */
+  .text-lg {
+    font-size: 1.7rem !important;
+  }
+
+  /* 32px */
+  .text-md {
+    font-size: 1.1rem !important;
+  }
+
+  /* 16px */
+  .text-sm {
+    font-size: 0.9rem !important;
+  }
+
+  .button-filled,
+  .button-outlined {
+    padding: 1rem 1.4rem !important;
+    font-size: 0.8rem !important;
+
+  }
+}
+
+@media (max-width: 600px) {
+  .page-container {
+    padding: 0 2.5rem;
+  }
+
+  /* 56px */
+  .text-xl {
+    font-size: 1.7rem !important;
+  }
+
+  /* 48px */
+  .text-lg {
+    font-size: 1.6rem !important;
+  }
+
+  /* 32px */
+  .text-md {
+    font-size: 1rem !important;
+  }
+
+  /* 16px */
+  .text-sm {
+    font-size: 0.8rem !important;
+  }
+
+  .button-filled,
+  .button-outlined {
+    padding: 1rem 1.2rem !important;
+    font-size: 0.7rem !important;
+
+  }
+}
 </style>
