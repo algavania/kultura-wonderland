@@ -25,33 +25,12 @@
             </div>
           </v-col>
           <v-col class="flex-grow-1 align-center d-flex justify-end">
-            <v-toolbar-items class="toolbar-item" v-if="!hasLogin">
+            <v-toolbar-items class="toolbar-item">
               <div v-for="link in links" :key="link.to">
-                <div
-                  style="cursor: pointer"
-                  :class="link.to == $route.path ? 'button-filled' : ''"
-                  class="font-weight-semibold py-2 px-5 ml-3"
-                >
-                  {{ link.name }}
-                </div>
-              </div>
-            </v-toolbar-items>
-            <v-toolbar-items class="toolbar-item" v-else>
-              <div class="d-flex align-center">
-                <div class="d-flex">
-                  <div v-for="link in links" :key="link.to">
-                    <v-btn
-                      height="50"
-                      :active="$route.path == link.to"
-                      class="mr"
-                      :ripple="false"
-                      elevation="0"
-                      color="white"
-                    >
-                      {{ link.name }}
-                    </v-btn>
-                  </div>
-                </div>
+                <v-btn v-if="link.to == $route.path" :class="link.to == $route.path ? 'button-filled' : ''">{{
+                  link.name
+                }}</v-btn>
+                <div v-else class="font-weight-semibold py-2 px-5 ml-3" style="cursor: pointer;">{{ link.name }}</div>
               </div>
             </v-toolbar-items>
           </v-col>
@@ -77,40 +56,9 @@ export default {
 </script>
 
 <style scoped>
-.v-btn {
-  border-bottom: 4px solid transparent;
-}
-
-.v-btn--active,
-.v-btn:active,
-.v-btn:hover {
-  border-bottom: 4px solid #064e3b;
-  border-radius: 4px !important;
-}
-
-.btn-toolbar,
-.btn-toolbar:hover {
-  border-bottom: none !important;
-  border-radius: 12px !important;
-}
-
 .appbar-icon {
   display: none;
 }
-
-.user-profile-picture {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 100%;
-  background: white;
-  object-fit: contain;
-  border: 1px rgba(0, 0, 0, 0.3) solid;
-}
-
-.user-menu:hover {
-  background-color: #f3f4f6;
-}
-
 @media screen and (max-width: 860px) {
   .logo-img {
     height: 42px;

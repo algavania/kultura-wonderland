@@ -79,12 +79,11 @@
                   bersama!
                 </div>
                 <div class="d-flex justify-center">
-                  <div
+                  <v-btn
                     class="button-default"
-                    style="width: fit-content !important"
                   >
                     Gabung Sekarang!
-                  </div>
+                  </v-btn>
                 </div>
               </div>
             </v-col>

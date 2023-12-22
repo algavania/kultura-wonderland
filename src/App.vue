@@ -25,24 +25,6 @@ export default {
   color: #182800;
 }
 
-.font-playfair {
-  font-family: "Playfair Display" !important;
-  font-weight: 500;
-  font-style: italic;
-  text-decoration-line: underline !important;
-}
-
-.font-gradient {
-  background: radial-gradient(50% 50% at 50% 50%, #78c601 0%, #487701 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.border-green {
-  border: 1px solid #78c601 !important;
-}
-
 .page-container {
   max-width: 1920px;
   margin: 0 auto;
@@ -66,19 +48,10 @@ export default {
   font-size: 1.7rem !important;
 }
 
-/* 24px */
-.text-small-md {
-  font-size: 1.5rem !important;
-}
-
 /* 16px */
 .text-sm {
   font-size: 1.04rem !important;
   line-height: 200%;
-}
-
-.font-weight-semibold {
-  font-weight: 600 !important;
 }
 
 .text-color-primary {
@@ -113,16 +86,9 @@ export default {
   );
 }
 
-.gradient-bg {
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    #78c601 0%,
-    #487701 100%
-  ) !important;
-}
-
 .button-filled {
   color: #ffffff !important;
+  cursor: pointer!important;
   border-radius: 1000px !important;
   padding: 1.3rem 1.4rem !important;
   background: radial-gradient(50% 50% at 50% 50%, #78c601 0%, #487701 100%);
@@ -131,22 +97,11 @@ export default {
   letter-spacing: 0 !important;
   font-size: 0.9rem !important;
   font-weight: 700 !important;
-  cursor: pointer;
 }
 
-.button-default {
-  color: black !important;
-  border-radius: 1000px !important;
-  padding: 0.8rem 1.5rem !important;
-  background-color: white !important;
-  letter-spacing: 0 !important;
-  font-size: 1.04rem !important;
-  font-weight: 700 !important;
-  cursor: pointer;
-  text-align: center;
-}
 .button-outlined {
   color: #60a001 !important;
+  cursor: pointer!important;
   background-color: #fafff2 !important;
   border: 2px solid #78c601;
   border-radius: 1000px !important;
@@ -156,9 +111,55 @@ export default {
   font-size: 0.9rem !important;
   font-weight: 700 !important;
   box-shadow: none !important;
-  cursor: pointer;
 }
 
+.flex-1 {
+  flex: 1 !important;
+}
+
+.font-playfair {
+  font-family: "Playfair Display" !important;
+  font-weight: 500;
+  font-style: italic;
+  text-decoration-line: underline !important;
+}
+
+.font-gradient {
+  background: radial-gradient(50% 50% at 50% 50%, #78c601 0%, #487701 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-green {
+  border: 1px solid #78c601 !important;
+}
+
+.font-weight-semibold {
+  font-weight: 600 !important;
+}
+
+.gradient-bg {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #78c601 0%,
+    #487701 100%
+  ) !important;
+}
+
+.button-default {
+  color: black !important;
+  border-radius: 1000px !important;
+  background-color: white !important;
+  letter-spacing: 0 !important;
+  font-size: 1.04rem !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+  text-align: center;
+  padding: 1.3rem 1.4rem !important;
+  text-transform: none !important;
+
+}
 .pattern-bg {
   background-image: url("assets/footer/pattern.svg") !important;
   background-repeat: no-repeat !important;
@@ -183,5 +184,69 @@ export default {
   background: #aedd67;
   padding: 0.3rem 1.2rem;
   font-weight: bold;
+}
+
+@media (max-width: 960px) {
+  .page-container {
+    padding: 0 4rem;
+  }
+
+  /* 56px */
+  .text-xl {
+    font-size: 2rem !important;
+  }
+
+  /* 48px */
+  .text-lg {
+    font-size: 1.7rem !important;
+  }
+
+  /* 32px */
+  .text-md {
+    font-size: 1.1rem !important;
+  }
+
+  /* 16px */
+  .text-sm {
+    font-size: 0.9rem !important;
+  }
+
+  .button-filled,
+  .button-outlined {
+    padding: 1rem 1.4rem !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-container {
+    padding: 0 2.5rem;
+  }
+
+  /* 56px */
+  .text-xl {
+    font-size: 1.7rem !important;
+  }
+
+  /* 48px */
+  .text-lg {
+    font-size: 1.6rem !important;
+  }
+
+  /* 32px */
+  .text-md {
+    font-size: 1rem !important;
+  }
+
+  /* 16px */
+  .text-sm {
+    font-size: 0.8rem !important;
+  }
+
+  .button-filled,
+  .button-outlined {
+    padding: 1rem 1.2rem !important;
+    font-size: 0.7rem !important;
+  }
 }
 </style>

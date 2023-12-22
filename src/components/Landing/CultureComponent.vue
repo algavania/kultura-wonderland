@@ -1,6 +1,6 @@
 <template>
-  <section class="culture-section">
-    <v-container>
+  <section class="culture-section my-16">
+    <div>
       <v-row>
         <v-col
           class="image-col"
@@ -37,12 +37,9 @@
               tradisi dan kesenian tradisional yang telah diwariskan
               turun-temurun mulai ditinggalkan oleh generasi muda.
             </div>
-            <div
-              class="button-outlined font-weight-semibold py-2 px-5 font-gradient border-green mt-8"
-              style="width: fit-content"
-            >
-              Jelajahi Sekarang!
-            </div>
+            <v-btn class="button-outlined mt-8">
+                Jelajahi Sekarang
+            </v-btn>
           </div>
 
           <div class="ml-6" style="margin-top: 4rem">
@@ -66,22 +63,19 @@
               >
               untuk mempertahankan tanah airnya.
             </div>
-            <div
-              class="button-outlined font-weight-semibold py-2 px-5 font-gradient border-green mt-8"
-              style="width: fit-content"
-            >
-              Jelajahi Sekarang!
-            </div>
+            <v-btn class="button-outlined mt-8">
+                Jelajahi Sekarang
+            </v-btn>
           </div>
         </v-col>
       </v-row>
-    </v-container>
+    </div>
   </section>
 </template>
 
 <script>
 export default {
-  name: "CultureSection",
+  name: "CultureComponent",
 };
 </script>
 
