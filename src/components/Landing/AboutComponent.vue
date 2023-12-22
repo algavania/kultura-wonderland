@@ -8,7 +8,7 @@
                     terdengar.</b> Tapi hei, kawula muda, dengarkanlah! Di sela nada modern, masih berdenyut irama kuno,
                 syair leluhur berbisik tentang akar. <b>Mari kita selami, bukan sekadar tahu,</b> tapi rasakan denyut nadi
                 peradaban, peluk kehangatan <b>tradisi yang hampir redup.</b></p>
-            <v-btn class="button-outlined">
+            <v-btn class="button-outlined" to="/culture">
                 Jelajahi Sekarang
             </v-btn>
         </div>

@@ -29,7 +29,7 @@
               tradisi dan kesenian tradisional yang telah diwariskan
               turun-temurun mulai ditinggalkan oleh generasi muda.
             </div>
-            <v-btn class="button-outlined mt-8">
+            <v-btn class="button-outlined mt-8" to="/culture">
               Jelajahi Sekarang
             </v-btn>
           </div>
@@ -56,7 +56,7 @@
                 dari kekuatan, keberanian, dan kesiapan masyarakat Dayak</b> untuk
               mempertahankan tanah airnya.
             </div>
-            <v-btn class="button-outlined mt-8">
+            <v-btn class="button-outlined mt-8" to="/culture">
               Jelajahi Sekarang
             </v-btn>
           </div>

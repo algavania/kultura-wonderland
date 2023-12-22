@@ -6,7 +6,7 @@
                     Lekang</span> oleh Zaman, Kita Lestarikan
                 Bersama!<span class="text-color-primary">”</span>
             </h1>
-            <v-btn class="button-filled mt-6 mb-12 mt-md-8 mb-md-16">
+            <v-btn class="button-filled mt-6 mb-12 mt-md-8 mb-md-16" to="/culture">
                 Jelajah Aneka Ragam Budaya!
             </v-btn>
         </div>
