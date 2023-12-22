@@ -31,9 +31,9 @@
 
       <v-navigation-drawer v-model="drawer" app right style="background-color: #fafff2 !important" class="d-lg-none">
         <v-list class="my-4">
-          <v-list-item v-for="link in links" :key="link.to" link>
+          <v-list-item v-for="link in links" :key="link.id" link>
             <v-list-item-content>
-              <router-link :to="link.to" style="text-decoration: none">
+              <router-link :to="link.id" style="text-decoration: none">
                 <v-list-item-title class="text-md">{{ link.name }}</v-list-item-title>
               </router-link>
             </v-list-item-content>
